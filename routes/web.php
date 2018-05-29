@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/students','StudentController@createStudent');
+Route::get('/students/{id}','StudentController@showStudentsById');
+Route::get('/students','StudentController@showStudents');
+Route::put('/students/{id}','StudentController@updateStudent');
+Route::delete('/students/{id}','StudentController@deleteStudent');
