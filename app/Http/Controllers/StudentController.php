@@ -13,7 +13,7 @@ class StudentController extends Controller
 
     private $rules = [
         'name' => 'required',
-        'sex' => 'required|in:男，女',
+        'sex' => 'required|in:男,女',
         'mobile' => 'required',
         'email' => 'required|email',
         'stuid' => 'required',
@@ -63,7 +63,7 @@ class StudentController extends Controller
         return response()->json([
             'code' => 1000,
             'message' => '请求成功',
-            '$data' => $student
+            'data' => $student
         ]);
     }
 
@@ -73,7 +73,7 @@ class StudentController extends Controller
         return response()->json([
             'code' => 1000,
             'message' => '请求成功',
-            '$data' => $students
+            'data' => $students
         ]);
     }
 
